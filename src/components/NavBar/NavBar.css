@@ -1,0 +1,18 @@
+.navbar {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    list-style:none ;
+    color: black;
+    margin-right: 25px;
+    margin-left: 450px;
+    width: 100%;
+}
+
+.container-logo {
+    width: 180px;
+}
+
+.container-logo img {
+    width: 100%;
+}

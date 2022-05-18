@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+h1,h2,h3,h4,p,span,a,input, button, li {
+  font-family: 'Lobster',swap;
+}
+
 .App {
   text-align: center;
 }
@@ -25,8 +31,19 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: black;
 }
+
+.App-buttom{
+  color: black;
+}
+
+.Card-pantalla{
+  margin: 50px;
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {
