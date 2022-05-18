@@ -2,7 +2,7 @@ import './NavBar.css'
 import { AppBar } from '@mui/material'
 import { Toolbar } from '@mui/material'
 import { Button } from '@mui/material'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AddShoppingCartTwoToneIcon from '@mui/icons-material/AddShoppingCartTwoTone';
 const NavBar = () => {
 
     return (
@@ -27,7 +27,7 @@ const NavBar = () => {
                         </li>
                     </ul>
                     <Button color="inherit">
-                    <ShoppingCartIcon /> 
+                    <AddShoppingCartTwoToneIcon /> 
                 </Button>
                 </Toolbar>
             </AppBar>
