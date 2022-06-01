@@ -1,5 +1,4 @@
-
-export const productos = [
+ const productos = [
     {
         titulo: 'Ryzen 5',
         precio: 36000,
@@ -44,4 +43,15 @@ export const productos = [
     },
 ]
 
+
+const producto  =   { 
+        titulo: 'Ryzen 5',
+        precio: 36000,
+        imagen: 'raizen.png',
+        stock: 7,
+        id: 1
+}
+
 export default productos
+
+export {producto}
