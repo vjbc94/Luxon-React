@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import productos from "./ItemList"
+import productos from "../../utils/mock"
 
 
 const ItemListContainer = ()  => {
@@ -18,6 +18,7 @@ const ItemListContainer = ()  => {
             .finally(() => {
             })
     }, [])
+
     const getProducts = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {

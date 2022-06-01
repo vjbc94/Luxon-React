@@ -1,8 +1,8 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import CardList from './components/CardList/CardList';
-import productos from './components/Item/ItemList';
-
+import productos from './utils/mock';
+import CardList from './components/Item/ItemList';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <NavBar/>
       <div className='Card-pantalla'>
         <CardList titulo = {'PRODUCTOS'} products={productos}/>
+        <ItemListContainer/>
       </div>
     </div>
   );
