@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import productos from "../../utils/mock"
+import CardList from "../Item/ItemList"
 
 
 const ItemListContainer = ()  => {
@@ -26,6 +27,12 @@ const ItemListContainer = ()  => {
             }, 2000)
         })
     }
+
+    return(
+        <div className='Card-pantalla'>
+            <CardList titulo={'PRODUCTOS'} products={productos} />
+        </div>
+    )
 
 }
 

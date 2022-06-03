@@ -3,6 +3,7 @@ import { AppBar } from '@mui/material'
 import { Toolbar } from '@mui/material'
 import { Button } from '@mui/material'
 import AddShoppingCartTwoToneIcon from '@mui/icons-material/AddShoppingCartTwoTone';
+import { Link } from 'react-router-dom';
 const NavBar = () => {
 
     return (
@@ -10,11 +11,12 @@ const NavBar = () => {
             <AppBar position="static" color="inherit" className='header-principal'>
                 <Toolbar>
                     <div className='container-logo'>
-                        <img src="./luxoon.png" alt='foto' />
+                    <Link to="/">    <img src="./luxoon.png" alt='foto' /> </Link>
                     </div>
                     <ul className='navbar'>
                         <li className='li-inicio'>
-                            <Button color="inherit"  >INICIO</Button>
+                            <Button color="inherit"> <Link to="/">INICIO </Link>
+                            </Button>
                         </li>
                         <li>
                             <Button color="inherit" >PRODUCTOS</Button>
@@ -27,8 +29,8 @@ const NavBar = () => {
                         </li>
                     </ul>
                     <Button color="inherit">
-                    <AddShoppingCartTwoToneIcon /> 
-                </Button>
+                        <AddShoppingCartTwoToneIcon />
+                    </Button>
                 </Toolbar>
             </AppBar>
         </>

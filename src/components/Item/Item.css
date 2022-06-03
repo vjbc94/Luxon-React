@@ -1,5 +1,5 @@
 img {
-    width: 100%;
+    width: 70%;
 }
 
 .card-item {
@@ -15,7 +15,12 @@ img {
     margin-bottom: 10px;
     font-size: 18px;
 }
-.contador { 
+
+.contador {
     display: flex;
     justify-content: center;
+}
+
+.img-btn {
+    display: contents;
 }

@@ -11,7 +11,7 @@ const CardList = ({ titulo, products }) => {
                     products.map(({ titulo, precio, imagen, id, stock }) => {
                         return (
                             <Grid item md={4} key={id}>
-                                <CardItem titulo={titulo} precio={precio} imagen={imagen} stock={stock} />
+                                <CardItem titulo={titulo} precio={precio} imagen={imagen} stock={stock} id={id} />
                             </Grid>
                         )
                     })

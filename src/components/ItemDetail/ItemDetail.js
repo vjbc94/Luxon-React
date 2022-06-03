@@ -1,10 +1,11 @@
 import { Button } from '@mui/material'
 import './ItemDetail.css'
 import MotorcycleIcon from '@material-ui/icons/Motorcycle';
+
 const ItemDetail = ({ data }) => {
     console.log(data)
     return (
-
+        <>
         <div>
             <div className='product-container'>
                 <div className="product-imagen">
@@ -21,6 +22,7 @@ const ItemDetail = ({ data }) => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
