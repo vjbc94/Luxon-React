@@ -1,9 +1,14 @@
 import { Button } from '@mui/material'
+import { useState } from 'react';
 import './ItemDetail.css'
 import MotorcycleIcon from '@material-ui/icons/Motorcycle';
+import ItemCount from '../ItemListContainer/ItemCounter';
+import { Link } from 'react-router-dom';
+
+
 
 const ItemDetail = ({ data }) => {
-    console.log(data)
+const [showButton, setShowButton] = useState(false)    
     return (
         <>
         <div>
@@ -15,10 +20,16 @@ const ItemDetail = ({ data }) => {
                     <div className='detail-product-info__title'>
                         <h2>{data.titulo}</h2>
                     </div>
-                    <p>{data.precio}</p>
+                    <p>${data.precio}</p>
                     <span className='span'>Envios Gratis  </span> <MotorcycleIcon/>
                     <span className='span'>6 Cuotas sin interés de $ {data.precio / 6}</span>
-                    <Button variant="contained" color="primary"> Agregar Al Carrito </Button>
+                    {!showButton ?
+                    <ItemCount
+                    stock={data.stock}
+                    setShowButton={setShowButton}
+                    />
+                    :
+                    <Button variant="contained" color="primary"> <Link to='/cart'>Comprar</Link> </Button> }
                 </div>
             </div>
         </div>

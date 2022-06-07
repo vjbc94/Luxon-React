@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
     const {id} = useParams()
-    const {categoria} = useParams()
     const [product, setProducts] = useState({})
 
    /*  const getItem = () => {
@@ -18,11 +17,6 @@ const ItemDetailContainer = () => {
     } */
 
     useEffect(() => {
-      /*   getItem()
-            .then((res) => {
-                console.log("Respuesta getItem: ", res)
-                setProducts(res)
-            }) */
             const productFilter = productos.find((product) => {
                 return product.id === parseInt(id);
             })
@@ -35,7 +29,8 @@ const ItemDetailContainer = () => {
             <div>
                 DETALLE DEL PRODUCTO
             </div>
-            {product && <ItemDetail data={product}/>}
+            {<ItemDetail data={product}/>}
+            
         </>
 
     )

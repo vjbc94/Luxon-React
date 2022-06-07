@@ -1,13 +1,14 @@
 import { Button } from '@mui/material';
 import { React, useState } from 'react';
 
-function ItemCount({ stock }) {
+function ItemCount({ stock, setShowButton }) {
     const [count, setCount] = useState(0)
 
     const sumQ = () => {
         console.log("stock: ", stock)
         if (count < stock) {
             setCount(count + 1)
+             console.log(count)
         }
     }
     const restQ = () => {
@@ -16,12 +17,15 @@ function ItemCount({ stock }) {
         }
     }
     return (
-
-        <div className='contador'>
+        <>
+         <div className='contador'>
             <Button onClick={restQ}> - </Button>
             <p> {count}</p>
             <Button onClick={sumQ}> + </Button>
         </div>
+        <Button onClick={() => setShowButton(true)} color="primary" variant={'contained'} >Agregar Al carrito</Button>
+        </>
+       
     )
 
 }
