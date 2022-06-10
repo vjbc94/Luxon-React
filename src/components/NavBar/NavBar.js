@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { Menu } from '@mui/material';
 import {MenuItem} from '@mui/material';
 import { useState } from 'react';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -66,9 +67,7 @@ const NavBar = () => {
                             <Button color="inherit"  >CONTACTO</Button>
                         </li>
                     </ul>
-                    <Button color="inherit">
-                        <AddShoppingCartTwoToneIcon />
-                    </Button>
+                    <CartWidget/>
                 </Toolbar>
             </AppBar>
         </>
