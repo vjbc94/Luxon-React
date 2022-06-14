@@ -2,19 +2,17 @@ import { Button } from '@mui/material';
 import { React, useState } from 'react';
 
 
-function ItemCount({ stock, setShowButton}) {
-    const [count, setCount] = useState(0)
+function ItemCount({ stock, count,actualizarCount, setShowButton}) {
 
     const sumQ = () => {
-        console.log("stock: ", stock)
+
         if (count < stock) {
-            setCount(count + 1)
-            console.log(count)
+            actualizarCount(count + 1)
         }
     }
     const restQ = () => {
         if (count > 0) {
-            setCount(count - 1)
+            actualizarCount(count - 1)
         }
     }
 

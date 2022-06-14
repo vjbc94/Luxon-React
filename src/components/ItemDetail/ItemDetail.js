@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import { useState } from 'react';
+import { React, useState } from 'react';
 import './ItemDetail.css'
 import MotorcycleIcon from '@material-ui/icons/Motorcycle';
 import ItemCount from '../ItemListContainer/ItemCounter';
@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 
 
 
-const ItemDetail = ({ data }) => {
-    const [count, setCount] = useState(0)
+const ItemDetail = ({ data, actualizarCount}) => {
+    const [count, setCount] = useState(1);
     const [showButton, setShowButton] = useState(false);
 
     const addProductToCart = () => {
@@ -34,7 +34,8 @@ const ItemDetail = ({ data }) => {
                                 <ItemCount
                                     setShowButton={setShowButton}
                                     count={count}
-                                    setCount={setCount}
+                                    actualizarCount = {setCount}
+                                    stock={data.stock}
                                 />
                                 :
                                 <Button
