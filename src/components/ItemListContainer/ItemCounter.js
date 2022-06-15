@@ -37,3 +37,5 @@ function ItemCount({ stock, count,actualizarCount, setShowButton}) {
 
 export default ItemCount
 
+export { count }
+
